@@ -1,0 +1,6 @@
+langchain>=0.1.0
+langchain-google-genai>=0.0.1
+python-dotenv>=1.0.0
+streamlit>=1.30.0
+duckduckgo-search>=5.0.0 # For a free search tool
+loguru>=0.7.0 # For better logging
