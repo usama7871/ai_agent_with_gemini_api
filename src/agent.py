@@ -85,9 +85,9 @@ Thought:{agent_scratchpad}
                 agent=agent,
                 tools=self._tools,
                 memory=self._memory,
-                verbose=False, # Set to True for detailed agent trace in console
+                verbose=True,     #Set to True for detailed agent trace in console
                 handle_parsing_errors=True,
-                max_iterations=5, # Limit tool usage to prevent infinite loops
+                max_iterations=7, # Limit tool usage to prevent infinite loops
                 early_stopping_method="generate"
             )
             logger.info("Langchain AgentExecutor created.")
