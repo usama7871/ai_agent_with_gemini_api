@@ -4,3 +4,6 @@ python-dotenv>=1.0.0
 streamlit>=1.30.0
 duckduckgo-search>=5.0.0 # For a free search tool
 loguru>=0.7.0 # For better logging
+wikipedia>=1.4.0
+redis>=4.5.5  # For persistent memory
+pytz>=2023.3
