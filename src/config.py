@@ -4,7 +4,7 @@ import os
 
 # --- LLM Configuration ---
 GEMINI_MODEL_NAME: str = "gemini-2.0-flash"
-# You might want to use "gemini-pro-vision" for multimodal tasks, but gemini-pro is text-only.
+# You might want to use "gemini-2.0-flash" for multimodal tasks, but gemini-pro is text-only.
 
 # --- Agent Configuration ---
 AGENT_SYSTEM_PROMPT: str = """
@@ -23,7 +23,19 @@ LOG_LEVEL: str = "INFO" # DEBUG, INFO, WARNING, ERROR, CRITICAL
 
 # --- Streamlit UI Configuration ---
 APP_TITLE: str = "Gemini AI Agent Chatbot"
-APP_ICON: str = "✨" # E.g., "🤖", "🚀", "💬"
+APP_ICON: str = "✨🤖" # E.g., "🤖", "🚀", "💬"
 
-# --- Tool Configuration (if tools need specific settings) ---
-# Example: If you had a custom API tool, its base URL might go here.
+
+# --- Enhanced Memory Configuration ---
+MEMORY_TYPE = "buffer"  # Options: "buffer", "window", "summary"
+MEMORY_WINDOW_SIZE = 6  # For ConversationBufferWindowMemory
+MAX_TOKEN_LIMIT = 2000  # For ConversationSummaryBufferMemory
+
+# --- Tool Configuration ---
+TOOL_TIMEOUT = 10  # Seconds before tool times out
+
+# --- Session Management ---
+SESSION_EXPIRATION = 3600  # 1 hour session expiration (for persistent memory)
+
+# --- New UI Settings ---
+ENABLE_MEMORY_MANAGEMENT = True
